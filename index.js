@@ -1,6 +1,5 @@
-const chalk = require("chalk");
-function ss(a,b){
-  return a+b;
-}
+import chalk from 'chalk';
 
-console.log(ss(1,2));
+console.log(chalk.blue('Hello, world!'));
+console.log(chalk.red.bold('This is an error message.'));
+console.log(chalk.green.underline('This is a success message.'));
