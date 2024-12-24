@@ -7,9 +7,9 @@ program
   .description('CLI to do file based tasks')
   .version('0.8.0');
 
-program.command('count')
-  .description('Count the number of lines in a file')
-  .argument('<file>', 'file to count')
+program.command('count') //Defines a new CLI command named count
+  .description('Count the number of lines in a file')//description of what the count command does.
+  .argument('<file>', 'file to count')//argument required #file path here
   .action((file) => {
     fs.readFile(file, 'utf8', (err, data) => {
       if (err) {
@@ -21,4 +21,6 @@ program.command('count')
     });
   });
 
-program.parse();
+ // console.log("hohoho : ",process.argv[2]);
+  
+program.parse(); //it reads argv and send it to their location
