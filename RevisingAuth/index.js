@@ -46,7 +46,7 @@ app.get("/me",(req,res)=>{
   const usee = user.find((u)=>{
     return u.username === username
   });
-
+ 
   if(user){
     res.send({
       "message":"content"
@@ -61,4 +61,4 @@ app.get("/me",(req,res)=>{
 
 
 
-app.listen(3000);
+app.listen(3000); 
